@@ -1,0 +1,157 @@
+{
+  "settings": {
+    "name": "Site 2023-09-22 02:02",
+    "currentPage": "index.html",
+    "theme": {
+      "name": "startm5",
+      "title": "StartM5",
+      "titlePreset": "StartM5",
+      "styling": {
+        "primaryColor": "#9fe870",
+        "secondaryColor": "#ffd7ef",
+        "successColor": "#3a341c",
+        "infoColor": "#320707",
+        "warningColor": "#a0e2e1",
+        "dangerColor": "#ffea64",
+        "mainFont": "Inter Tight",
+        "display1Font": "Inter Tight",
+        "display1Size": 5,
+        "display2Font": "Inter Tight",
+        "display2Size": 4,
+        "display5Font": "Inter Tight",
+        "display5Size": 2.5,
+        "display7Font": "Inter Tight",
+        "display7Size": 1.4,
+        "display4Font": "Inter Tight",
+        "display4Size": 1.2,
+        "isRoundedImages": true,
+        "isRoundedButtons": true,
+        "isLargeButtons": true,
+        "isGhostButtonBorder": true,
+        "underlinedLinks": false,
+        "isAnimatedOnScroll": false,
+        "isScrollToTopButton": false
+      }
+    },
+    "path": "@PROJECT_PATH@",
+    "versionFirst": "5.9.6",
+    "siteFonts": [
+      {
+        "css": "'Inter Tight', sans-serif",
+        "name": "Inter Tight",
+        "url": "https://fonts.googleapis.com/css?family=Inter+Tight:100,200,300,400,500,600,700,800,900,100i,200i,300i,400i,500i,600i,700i,800i,900i"
+      }
+    ],
+    "uniqCompNum": 2,
+    "versionPublish": "5.9.6",
+    "imageResize": true,
+    "screenshot": "screenshot.png",
+    "favicon": false,
+    "mbrsiteDomain": "ty1okqnu7d",
+    "usedWebp": false,
+    "robotsSwitcher": false,
+    "sitemapSwitcher": false,
+    "sitemapSwitcherAuto": false,
+    "siteUrl": false,
+    "cookiesAlert": false,
+    "gdpr": false
+  },
+  "pages": {
+    "index.html": {
+      "settings": {
+        "main": true,
+        "title": "Launchpad XYZ™ | Official Site Presale",
+        "meta_descr": "Launchpad XYZ is a consumer-focused portal that will provide insights and analytics on all Web3 sectors through a beautifully designed, humanised interface - bringing Web3 to everyone.",
+        "header_custom": "",
+        "footer_custom": "",
+        "html_before": ""
+      },
+      "components": [
+        {
+          "alias": false,
+          "_styles": {
+            "& when not (@fullScreen)": {
+              "padding-top": "(@paddingTop * 1rem)",
+              "padding-bottom": "(@paddingBottom * 1rem)"
+            },
+            "& when (@bg-type = \"color\")": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = \"image\")": {
+              "background-image": "url(@bg-value)"
+            },
+            ".mbr-fallback-image.disabled": {
+              "display": "none"
+            },
+            ".mbr-fallback-image": {
+              "display": "block",
+              "background-size": "cover",
+              "background-position": "center center",
+              "width": "100%",
+              "height": "100%",
+              "position": "absolute",
+              "top": "0",
+              "& when (@bg-type = 'video')": {
+                "background-image": "url(@fallBackImage)"
+              }
+            },
+            ".card-content-text": {
+              "@media (max-width: 767px)": {
+                "padding": "0 1.5rem 1.5rem 1.5rem"
+              },
+              "@media (min-width: 768px)": {
+                "padding": "0 2.25rem 2.25rem 2.25rem"
+              }
+            },
+            ".card-wrapper": {
+              "background": "@wrapBgColor"
+            },
+            ".mbr-text, .mbr-section-btn": {
+              "color": "#000000",
+              "text-align": "left"
+            },
+            ".card-title, .card-box": {
+              "text-align": "left",
+              "color": "#000000"
+            }
+          },
+          "_name": "article08",
+          "_sourceTheme": "startm5",
+          "_customHTML": "<section data-bs-version=\"5.1\" class=\"article8\" group=\"Article\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{\n    'mbr-fullscreen': fullScreen,\n    'mbr-parallax-background': bg.parallax}\">\n  <mbr-parameters>\n    <header>Size</header>\n    <input type=\"checkbox\" title=\"Full Screen\" name=\"fullScreen\">\n    <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\">\n    <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"5\">\n    <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"5\">\n    <input type=\"range\" inline title=\"Content Width\" name=\"contentWidth\" min=\"8\" max=\"12\" step=\"1\" value=\"10\">\n    <header>Show/Hide</header>\n    <input type=\"checkbox\" title=\"Image\" name=\"showImage\" checked>\n    <input type=\"checkbox\" title=\"Title\" name=\"showTitle\" checked>\n    <input type=\"checkbox\" title=\"Subtitle\" name=\"showSubtitle\" checked>\n    <input type=\"checkbox\" title=\"Text\" name=\"showText\" checked>\n    <input type=\"checkbox\" title=\"Buttons\" name=\"showButtons\">\n    <input type=\"color\" title=\"Wrap Bg\" name=\"wrapBgColor\" value=\"#ffffff\">\n    <header>Background</header>\n    <fieldset type=\"background\" name=\"bg\" parallax>\n      <input type=\"image\" title=\"Image\" value=\"../_images/background1.jpg\" parallax>\n      <input type=\"color\" title=\"Color\" value=\"#edefeb\" selected>\n      <input type=\"video\" title=\"Video\" value=\"https://vimeo.com/428046504\">\n    </fieldset>\n    <header condition=\"bg.type === 'video'\">Fallback Image</header>\n    <input type=\"image\" title=\"Fallback Image\" value=\"../_images/background1.jpgg\" name=\"fallBackImage\" condition=\"bg.type === 'video'\">\n    <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n    <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#ffffff\" condition=\"overlay && bg.type !== 'color'\">\n    <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.3\" condition=\"overlay && bg.type !== 'color'\">\n  </mbr-parameters>\n\n  <div class=\"mbr-fallback-image disabled\" mbr-if=\"bg.type == 'video'\"></div>\n  <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\"></div>\n  <div mbr-class=\"{'container': !fullWidth, 'container-fluid': fullWidth}\">\n    <div class=\"row justify-content-center\">\n      <div class=\"card col-md-12 col-lg-{{contentWidth}}\">\n        <div class=\"card-wrapper\">\n          <div class=\"image-wrapper d-flex justify-content-center mb-4\">\n            <img mbr-if=\"showImage\" src=\"@PROJECT_PATH@/assets/images/memeinator-1375x845.jpg\" alt=\"Memeinator\">\n          </div>\n          <div class=\"card-content-text\">\n            <h3 class=\"card-title mbr-fonts-style mbr-white mt-3 mb-4\" mbr-theme-style=\"display-1\" mbr-if=\"showTitle\" data-app-selector=\".card-title, .card-box\"><b>Launchpad xyz&nbsp; | Official Site</b></h3>\n          <div class=\"row card-box align-left\">\n            <div class=\"item features-without-image col-12\">\n              <div class=\"item-wrapper\">\n                <h4 class=\"mbr-section-subtitle mbr-fonts-style mb-3\" mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle\" mbr-theme-style=\"display-5\"><b>Memeinator Official: Join the Resistance</b></h4>\n                <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .mbr-section-btn\"><a href=\"https://launchpad-xyz.github.io/\" class=\"text-primary\">Launchpad xyz</a> and find the next 10x trade. Tired of waiting on presale promises or getting dumped on? Launchpad xyz will show you how we find multiple 10x return trades every month.<br>With powerful marketing, innovative product launches, and the ultimate action game; Memeinator is poised to become the most traded meme coin.&nbsp;<br></p>\n              </div>\n            </div>\n            <div class=\"item features-without-image col-12\">\n              <div class=\"item-wrapper\">\n                <h4 class=\"mbr-section-subtitle mbr-fonts-style\" mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle\" mbr-theme-style=\"display-5\"><b>Launchpad xyz key features.</b></h4>\n                <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .mbr-section-btn\">We’re providing all the training required to be a successful trader and empowering Web3 users of any experience level to maximise their profit potential.<br><br><b>All of Web3 in one place.</b>: Launchpad xyz makes Web3 human by simplifying a complex world into one familiar home. Discover how things work, what the risks are, and how to operate safely.<br></p>\n              </div>\n            </div>\n            <div class=\"item features-without-image col-12\">\n              <div class=\"item-wrapper\">\n                <h4 class=\"mbr-section-subtitle mbr-fonts-style\" mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle\" mbr-theme-style=\"display-5\"><b>About Launchpad XYZ</b></h4>\n                <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .mbr-section-btn\"><b><a href=\"https://launchpad-xyz.github.io/\" class=\"text-primary\">Launchpad XYZ</a></b> is a brand-new Web3-focused platform designed to be a central hub for the new wave of digital assets. Combining features like an NFT DEX, fractionalized assets marketplace, and a custom-built trading terminal, Launchpad XYZ offers an “all-in-one” solution for investors of all experience levels.\n<br>\n<br><b>The Launchpad XYZ</b> ecosystem will contain an array of valuable features designed to onboard the next 10 million Web3 users. These features include a custom-built Web3 wallet, an NFT decentralized exchange (DEX), a crypto trading terminal, and a fractionalized assets marketplace.\n<br>\n<br><b>GET THE EDGE IN TRADING\n</b><br>Ever wondered why an asset suddenly pumps or dumps? Heard the term ‘Liquidity Zone’ but not sure how to find them? Launchpad XYZ has a mission - and that is to make sure anyone can understand how the Web3 markets work, and how to create your own trading framework to give you the best chance of success.\n<br>\n<br><b>UNDERSTAND MARKET MOVES\n</b><br>Missed out on the last token to pump 100% or more? Launchpad XYZ is here to make sure you catch as many of these as possible. We'll teach you the methods and decision-making frameworks to base your decisions on, and leave you in full control of your next trade. No more relying on Twitter or Telegram groups!\n<br>\n<br><b>LEARN WITH LAUNCHPAD XYZ\n</b><br>Launchpad XYZ will support users in learning and understanding the Web3 ecosystem, from in-depth analytics and insights to news and market sentiment. Showing which projects could be the next BAYC with significant financial upside.\n<br>\n<br><b>DISCOVER WHAT'S NEXT WITH 'LQ</b>'\n<br>Tired of having to use 5-10 different platforms to get the right information? The Launchpad XYZ Feed is Web3 all in one place, in an easy-to-understand format. We’ll use a single metric called Launchpad XYZ Quotient (LQ) to show you what's hot and what's not in the market.\n<br>\n<br><b>BRANDS\n</b><br>Launchpad XYZ uses industry-standard processes to provide the tools, pricing and delivery schedules to fit in with how agencies work. Enabling brands to deliver world-class Web3 experiences in weeks, not months.<br>\n<br></p>\n              </div>\n            </div>\n\n            <div mbr-buttons mbr-theme-style=\"display-7\" class=\"mbr-section-btn mt-3\" mbr-if=\"showButtons\" data-toolbar=\"-mbrBtnMove\">\n              <a class=\"btn btn-primary\" href=\"https://mobiri.se\" data-app-placeholder=\"Type Text\">Start Now</a>\n            </div>\n          </div>\n          </div>\n        </div>\n      </div>\n    </div>\n  </div>\n</section>",
+          "_cid": "tQCiJrGvcL",
+          "_anchor": "article08-0",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "alias": false,
+          "_styles": {
+            "padding-top": "(@paddingTop * 1rem)",
+            "padding-bottom": "(@paddingBottom * 1rem)",
+            "background-color": "@bgColor",
+            ".mbr-text": {
+              "color": "#000000"
+            },
+            ".mbr-section-subtitle": {
+              "color": "#000000"
+            },
+            ".mbr-section-title": {
+              "color": "#000000"
+            }
+          },
+          "_name": "article12",
+          "_sourceTheme": "startm5",
+          "_customHTML": "<section data-bs-version=\"5.1\" class=\"article12\" group=\"Article\">    \n    <mbr-parameters>\n        <header>Size</header>\n        <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\">\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"5\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"5\">\n        <input type=\"range\" name=\"textWidth\" title=\"Width\" min=\"4\" max=\"12\" value=\"10\" step=\"1\">\n        <header>Show/Hide</header>\n        <input type=\"checkbox\" title=\"Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Subtitle\" name=\"showSubtitle\">\n        <input type=\"checkbox\" title=\"Text\" name=\"showText\" checked>\n        <header>Background</header>\n        <input type=\"color\" title=\"Color\" name=\"bgColor\" value=\"#ffffff\">\n    </mbr-parameters>\n    <div mbr-class=\"{'container': !fullWidth, 'container-fluid': fullWidth}\">\n        <div class=\"row justify-content-center\">\n            <div class=\"col-md-12 col-lg-{{textWidth}}\">\n                <h3 class=\"mbr-section-title mbr-fonts-style mb-4 mt-0\" mbr-if=\"showTitle\" data-app-selector=\".mbr-section-title\" mbr-theme-style=\"display-2\"><b>All of Web3 in one place.</b></h3>\n                <h4 class=\"mbr-section-subtitle mbr-fonts-style mb-4\" mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle\" mbr-theme-style=\"display-5\">The storytelling magic of photos\n                </h4>\n                <p class=\"mbr-text mbr-fonts-style\" mbr-if=\"showText\" data-app-selector=\".mbr-text\" mbr-theme-style=\"display-7\"><p>Launchpad xyz makes Web3 human by simplifying a complex world into one familiar home. Discover how things work, what the risks are, and how to operate safely.\n<br><br><b>Get the edge in trading.\n</b><br>Ever wondered why an asset suddenly pumps or dumps? Heard the term ‘Liquidity Zone’ but not sure how to find them? Launchpad xyz has a mission - and that is to make sure anyone can understand how the Web3 markets work, and how to create your own trading framework to give you the best chance of success.<br><br><b>Understand market moves.\n</b><br>Missed out on the last token to pump 100% or more? Launchpad xyz is here to make sure you catch as many of these as possible. We'll teach you the methods and decision-making frameworks to base your decisions on, and leave you in full control of your next trade. No more relying on Twitter or Telegram groups!<br><br><b>Learn with Launchpad xyz.</b>&nbsp;<br>Launchpad xyz will support users in learning and understanding the Web3 ecosystem, from in-depth analytics and insights to news and market sentiment. Showing which projects could be the next BAYC with significant financial upside.<br><br><b>Launchpad Quotient.\n</b><br>Introducing the LPQ an innovative ranking system leveraging over 400 data points. It analyses social, financial, and market data to deliver a confidence and trust ranking for diverse digital assets. Empower your investment decisions with unparalleled insights into the most promising opportunities of the digital realm.<br><br><b>Apollo, our custom A.I.\n</b><br>Ignite your investment prowess with our bespoke A.I language model. Unleash its power to decode digital assets, revealing invaluable insights. Transform data into informed decisions and conquer the world of investments with confidence.<br><b><br>Whitepaper.</b>&nbsp;<br>The Web3 market is a fractured and intimidating sector for the average person to get involved with.\n<br>\n<br>Launchpad xyz will solve this by creating the home of Web3. A humanised, curated portal which provides easy access to the best projects in the blockchain space. From NFTs to play-to-earn games, Launchpad XYZ will provide an unbiased window into the latest and greatest experiences Web3 has to offer.\n<br>\n</p><br><p><b>Roadmap</b></p>Our mission is to change Web3 for the better and help bring the next 10 million users onboard. Here’s what we’re aiming to build to make this happen.<br><br><b>\nFrequently asked questions.</b><br><b>\n</b><br><b>What is Launchpad xyz?</b><br>Launchpad xyz is a consumer-focused portal that will provide insights and analytics on all Web3 sectors through a beautifully designed, humanised interface - bringing Web3 to everyone.<br><br><b>Why Launchpad xyz?\n</b><br>We are focused on being the heart of the next wave of Web3 users by focusing on two core values - independence and decentralisation. We're here to help anyone use Web3 safely and to ensure our users maximise the potential yield in the next bull run.<b><br></b><br><p><b>What are the bonuses for staking?\n</b><br>If you stake an average of 10,000 LPX over 90 days you will get access to the following rewards: Discount on trading fees | Guaranteed access to NFT mint whitelists | Guaranteed access to presales | Access to partner discounts | Beta P2E game releases | Community prestige badges - and much more.</p><p><b>When will I get my LPX tokens?\n</b><br>You will be able to claim tokens through the website shortly after the presale concludes.</p><p><b>Where can I exchange my LPX tokens?\n</b><br>We'll initially launch only on our internal DEX. Our plan is to launch on CEXs when the platform is delivered and market liquidity denotes new market entrants.</p><p><b>When will Launchpad xyz go live?\n</b><br>Our goal is for phase one to launch by Q3 2023.<br></p></p>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_cid": "tQCjn8Nckk",
+          "_anchor": "article12-1",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        }
+      ]
+    }
+  }
+}
